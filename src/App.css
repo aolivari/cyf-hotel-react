@@ -55,3 +55,8 @@ tr {
 .card {
   width: 18rem;
 }
+/* Agregado personal de la imagen */
+#headerImage {
+  width: 75px;
+  margin-bottom: 2px;
+}
