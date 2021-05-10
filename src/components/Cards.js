@@ -3,7 +3,7 @@ import React from "react";
 function Card(props) {
   return (
     <div className="card border border-info">
-      <img src={props.img} alt="Image of place" />
+      <img src={props.img} alt="Img of place" />
 
       <div className="card-body text-center">
         <h3 className="card-title">{props.city}</h3>
