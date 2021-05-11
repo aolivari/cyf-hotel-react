@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import ColorLines from "./ColorLines";
 
 function SearchResults(props) {
   const { results } = props;
@@ -17,15 +18,7 @@ function SearchResults(props) {
       </thead>
       <tbody>
         {results.map((result, index) => (
-          <tr key={`tr-${index}`}>
-            {Object.values(result).map((element, index) => (
-              <td key={`td-${index}`}>{element}</td>
-            ))}
-            <td key={`duration-${index}`}>{`Has a booking for ${moment(
-              result.checkOutDate,
-              "YYYY-MM-DD"
-            ).diff(moment(result.checkInDate), "days")} nigths.`}</td>
-          </tr>
+          <ColorLines result={result} key={`bookingRow-${index}`} />
         ))}
       </tbody>
     </table>
